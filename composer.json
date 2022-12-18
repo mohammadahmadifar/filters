@@ -1,0 +1,20 @@
+{
+    "name": "mohammadahmadifar/filters",
+    "description": "This package helps you to create custom search on index method of controllers easily.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mohammad Ahmadifar",
+            "email": "mohammadahmadifar1@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Ahmadifar\\Filters\\": "src/Filters/",
+            "Ahmadifar\\Interfaces\\": "src/Interfaces/",
+            "Ahmadifar\\Models\\": "src/Models/",
+            "Ahmadifar\\Traits\\": "src/Traits/"
+        }
+    }
+}
