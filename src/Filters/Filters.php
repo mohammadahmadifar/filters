@@ -79,7 +79,14 @@ abstract class Filters implements FiltersInterface
         }
 
         if ($this->request->filled('orderBy')) {
-            $this->orderBy($this->request->orderBy);
+            $exOrderBy = explode('-', $this->request->orderBy);
+            if (count($exOrderBy) == 2) {
+                if ($exOrderBy[1] == 'asc' || $exOrderBy[1] == 'desc') {
+                    $this->builder->orderBy($exOrderBy[0], $exOrderBy[1]);
+                }
+            } else {
+                $this->builder->orderBy('name');
+            }
         }
 
         if ($this->request->filled('search')) {
