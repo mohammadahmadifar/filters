@@ -4,7 +4,7 @@ This package helps you to create custom search on index method of controllers ea
 ## Installation
 Use the package manager [composer](https://getcomposer.org) to install this package.
 ```bash
-composer require mohammadahmadifar/filters
+composer require mohammadahmadifar/filters:dev-main
 ```
 
 ## Usage
