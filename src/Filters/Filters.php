@@ -85,8 +85,10 @@ abstract class Filters implements FiltersInterface
                     $this->builder->orderBy($exOrderBy[0], $exOrderBy[1]);
                 }
             } else {
-                $this->builder->orderBy('name');
+                $this->builder->orderBy($this->request->orderBy);
             }
+        }else{
+            $this->builder->orderBy('id', 'desc');
         }
 
         if ($this->request->filled('search')) {
